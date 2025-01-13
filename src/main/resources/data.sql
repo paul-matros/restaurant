@@ -1,7 +1,27 @@
+-- Create tables
+CREATE TABLE cuisine (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT
+);
+
+CREATE TABLE menu_item (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DOUBLE NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    cuisine_id BIGINT,
+    FOREIGN KEY (cuisine_id) REFERENCES cuisine (id)
+);
+
+CREATE TABLE orders (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY
+);
+
 -- Insert Cuisines
 INSERT INTO cuisine (id, name) VALUES (1, 'Polish');
 INSERT INTO cuisine (id, name) VALUES (2, 'Mexican');
-INSERT INTO cuisine (id, name) VALUES (3, 'Italian'');
+INSERT INTO cuisine (id, name) VALUES (3, 'Italian');
 INSERT INTO cuisine (id, name) VALUES (4, 'None');
 
 -- Insert Menu Items (Meals)
