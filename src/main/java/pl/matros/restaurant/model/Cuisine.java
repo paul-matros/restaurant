@@ -8,13 +8,18 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Cuisine {
+public class Cuisine implements Displayable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name; // e.g., POLISH, MEXICAN, ITALIAN
+    private String name;
 
-    private String description; // e.g., "Traditional dishes from Poland."
+    private String description;
+
+    @Override
+    public String getDisplayName() {
+        return this.name;
+    }
 }

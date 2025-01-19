@@ -1,8 +1,8 @@
 package pl.matros.restaurant.model;
 
 public enum MenuItemType {
-    DRINK,
     MEAL,
-    DESSERT,
-    ADDITION
+    DRINK,
+    DRINK_ADDITION,
+    DESSERT
 }
