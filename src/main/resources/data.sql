@@ -1,28 +1,7 @@
--- Create tables
-CREATE TABLE cuisine (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT
-);
-
-CREATE TABLE menu_item (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    price DOUBLE NOT NULL,
-    type VARCHAR(255) NOT NULL,
-    cuisine_id BIGINT,
-    FOREIGN KEY (cuisine_id) REFERENCES cuisine (id)
-);
-
-CREATE TABLE orders (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY
-);
-
 -- Insert Cuisines
 INSERT INTO cuisine (id, name) VALUES (1, 'Polish');
 INSERT INTO cuisine (id, name) VALUES (2, 'Mexican');
 INSERT INTO cuisine (id, name) VALUES (3, 'Italian');
-INSERT INTO cuisine (id, name) VALUES (4, 'None');
 
 -- Insert Menu Items (Meals)
 INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (1, 'Pierogi', 10.0, 'MEAL', 1);
@@ -35,9 +14,9 @@ INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (5, 'Churros', 
 INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (6, 'Tiramisu', 7.0, 'DESSERT', 3);
 
 -- Insert Menu Items (Drinks)
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (7, 'Water', 1.0, 'DRINK', 4);
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (8, 'Soda', 2.5, 'DRINK', 4);
+INSERT INTO menu_item (id, name, price, type) VALUES (7, 'Water', 1.0, 'DRINK');
+INSERT INTO menu_item (id, name, price, type) VALUES (8, 'Soda', 2.5, 'DRINK');
 
 -- Insert Menu Items (Additions)
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (10, 'Ice', 0.5, 'ADDITION', 4);
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (11, 'Lemon', 0.75, 'ADDITION', 4);
+INSERT INTO menu_item (id, name, price, type) VALUES (10, 'Ice', 0.5, 'DRINK_ADDITION');
+INSERT INTO menu_item (id, name, price, type) VALUES (11, 'Lemon', 0.75, 'DRINK_ADDITION');
