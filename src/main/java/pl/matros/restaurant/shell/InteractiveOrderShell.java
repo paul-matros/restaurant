@@ -69,9 +69,9 @@ public class InteractiveOrderShell {
         Cuisine cuisine = selectCuisine();
         OrderItem mainCourse;
         if (cuisine == null) {
-            mainCourse = new OrderItem(selectMenuItem(MenuItemType.MEAL));
+            mainCourse = new OrderItem(selectMenuItem(MenuItemType.MAIN_COURSE));
         } else {
-            mainCourse = new OrderItem(selectMenuItem(MenuItemType.MEAL, cuisine));
+            mainCourse = new OrderItem(selectMenuItem(MenuItemType.MAIN_COURSE, cuisine));
         }
         return mainCourse;
     }
