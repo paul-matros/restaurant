@@ -3,10 +3,10 @@ INSERT INTO cuisine (id, name) VALUES (1, 'Polish');
 INSERT INTO cuisine (id, name) VALUES (2, 'Mexican');
 INSERT INTO cuisine (id, name) VALUES (3, 'Italian');
 
--- Insert Menu Items (Meals)
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (1, 'Pierogi', 10.0, 'MEAL', 1);
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (2, 'Tacos', 12.5, 'MEAL', 2);
-INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (3, 'Lasagna', 14.0, 'MEAL', 3);
+-- Insert Menu Items (Main courses)
+INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (1, 'Pierogi', 10.0, 'MAIN_COURSE', 1);
+INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (2, 'Tacos', 12.5, 'MAIN_COURSE', 2);
+INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (3, 'Lasagna', 14.0, 'MAIN_COURSE', 3);
 
 -- Insert Menu Items (Desserts)
 INSERT INTO menu_item (id, name, price, type, cuisine_id) VALUES (4, 'Polish Cheesecake', 6.0, 'DESSERT', 1);
