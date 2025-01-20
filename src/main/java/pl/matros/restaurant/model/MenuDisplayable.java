@@ -1,5 +1,6 @@
 package pl.matros.restaurant.model;
 
-public interface Displayable {
+public interface MenuDisplayable {
+
     String getDisplayName();
 }

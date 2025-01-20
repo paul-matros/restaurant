@@ -27,7 +27,7 @@ public class InputHandler {
         }
     }
 
-    public boolean getYesNoAnswer(String title) {//todo title should not be here
+    public boolean getYesNoAnswer(String title) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.printf("%s (yes/no): ", title);

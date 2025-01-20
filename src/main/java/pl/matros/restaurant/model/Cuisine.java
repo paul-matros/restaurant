@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Cuisine implements Displayable {
+public class Cuisine implements MenuDisplayable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import pl.matros.restaurant.model.*;
 import pl.matros.restaurant.repository.CuisineRepository;
 import pl.matros.restaurant.repository.MenuItemRepository;
-import pl.matros.restaurant.repository.OrderRepository;
+import pl.matros.restaurant.repository.PlacedOrderRepository;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public class OrderService {
 
     private final CuisineRepository cuisineRepository;
     private final MenuItemRepository menuItemRepository;
-    private final OrderRepository orderRepository;
+    private final PlacedOrderRepository placedOrderRepository;
 
     public List<Cuisine> getAllCuisines() {
         return cuisineRepository.findAll();
@@ -36,7 +36,7 @@ public class OrderService {
         PlacedOrder order = new PlacedOrder();
         order.setItems(items.toString());
         order.setTotalPrice(calculateTotalOrderPrice(items));
-        return orderRepository.save(order);
+        return placedOrderRepository.save(order);
     }
 
     private int calculateTotalOrderPrice(List<OrderItem> items) {
