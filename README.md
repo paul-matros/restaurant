@@ -1,11 +1,13 @@
 # RECRUITMENT TEST (JAVA DEVELOPER) FOR X-FORMATION
 
-## How to run this application
+## Task 1
+
+### How to run this application
 
 1. Run with ide or go to root directory, build jar(./mvnw package) and run jar
 2. type "order" to start ordering lunch
 
-## Design choices and comments
+### Design choices and comments
 
 1. As job requires Spring knowledge I've chosen to use Spring shell
 2. For database I've chosen in memory database populated by data.sql to fulfill "out of the box" requirement
