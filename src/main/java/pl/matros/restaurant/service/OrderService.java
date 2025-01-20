@@ -39,7 +39,7 @@ public class OrderService {
         return placedOrderRepository.save(order);
     }
 
-    private int calculateTotalOrderPrice(List<OrderItem> items) {
+    int calculateTotalOrderPrice(List<OrderItem> items) {
         return items.stream()
                 .mapToInt(this::calculateOrderItemPrice)
                 .sum();
