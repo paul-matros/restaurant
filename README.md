@@ -19,3 +19,25 @@
    and "autosearch" for entries with same type and isAddition=true)
 7. I could have write more robust tests but its late;) and i believe I've shown myself from best side - taking under
    consideration its my first spring shell app
+
+## Task 2(SQL)
+
+### Query 1: Select countries where the total number of inhabitants (population) in all cities is greater than 400.
+
+```
+SELECT c.Name
+FROM Country c
+JOIN City ci ON c.CountryID = ci.CountryID
+GROUP BY c.CountryID, c.Name
+HAVING SUM(ci.Population) > 400;
+```
+
+### Query 2: Select names of the countries that have no buildings at all.
+
+```
+SELECT c.Name
+FROM Country c
+LEFT JOIN City ci ON c.CountryID = ci.CountryID
+LEFT JOIN Building b ON ci.CityID = b.CityID
+WHERE b.BuildingID IS NULL
+```
